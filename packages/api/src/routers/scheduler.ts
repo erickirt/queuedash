@@ -33,7 +33,7 @@ export const schedulerRouter = router({
       z.object({
         queueName: z.string(),
         jobName: z.string(),
-        data: z.record(z.any()),
+        data: z.record(z.string(), z.unknown()),
         pattern: z.string().optional(),
         every: z.number().optional(),
         tz: z.string().optional(),
